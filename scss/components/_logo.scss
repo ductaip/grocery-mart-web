@@ -4,24 +4,28 @@
     display: flex;
     align-items: center;
     column-gap: 14px;
-    @include abstracts.breakpoint(lg) {
+
+    @include abstracts.screen(lg) {
         column-gap: 10px;
         margin-left: 39px;
     }
 
+    @include abstracts.screen(md) {
+        margin-left: 0;
+    }
 
     &__title {
         font-size: 1.8rem;
         font-weight: 700;
         line-height: 1.45; /* 144.444% */
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             font-size: 1.8rem;
         }
     }
 
     &__img {
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             width: 24px;
         }
     }

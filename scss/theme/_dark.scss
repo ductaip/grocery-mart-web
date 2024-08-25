@@ -1,10 +1,37 @@
+@use "../abstracts";
+
 :root.dark {
-    --text-color: #ffffff;
+    --text-color: #b9babe;
     --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%)
         saturate(7500%) hue-rotate(151deg) brightness(103%) contrast(100%);
 
+    --body-bg: #292e39;
     --header-bg-color: #171c28;
     --top-act-group-bg-color: #292e39;
     --top-act-group-shadow: rgba(0, 0, 0, 0.2);
     --top-act-group-separate: #ededf6;
+
+    @include abstracts.screen(lg) {
+        --header-shadow-color: rgba(0, 0, 0, 0.2);
+    }
+
+    // dropdown
+    --dropdown-bg-color: #2f3441;
+    --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
+    --dropdown-arrow-color: brightness(0) saturate(100%) invert(17%) sepia(6%)
+        saturate(2076%) hue-rotate(186deg) brightness(90%) contrast(87%);
+    --top-menu-border-color: #171c28;
+    --menu-column-icon-color: brightness(0) saturate(100%) invert(100%)
+        sepia(32%) saturate(167%) hue-rotate(77deg) brightness(102%)
+        contrast(96%);
+
+    // sidebar
+    --sidebar-bg: #292e39;
+    --sidebar-shadow: rgba(23, 28, 40, 0.4);
+
+    --cate-item-bg: #171C28;
+    --heading-color: #fff;
+    --cate-thumb-bg: #292E39;
+
 }
+

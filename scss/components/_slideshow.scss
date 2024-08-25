@@ -1,0 +1,93 @@
+@use "../abstracts";
+
+.slideshow {
+    position: relative;
+
+    &__inner {
+        display: flex;
+        overflow: hidden;
+    }
+
+    &__item {
+        position: relative;
+        width: 100%;
+        padding-top: 34%;
+        flex-shrink: 0;
+
+        @include abstracts.screen(md) {
+            padding-top: 50%;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+
+    &__page {
+        display: flex;
+        align-items: center;
+        column-gap: 24px;
+        position: absolute;
+        bottom: 15%;
+        left: 5.2%;
+        width: 12.8%;
+
+        @include abstracts.screen(md) {
+            width: 9%;
+        }
+    }
+
+    &__num {
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44; /* 144.444% */
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+            line-height: 142.857%;
+        }
+    }
+
+    &__slider {
+        position: relative;
+        width: 100%;
+        height: 4px;
+        background: #fff;
+        flex-shrink: 0;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            translate: 0 -50%;
+            border: 4px solid #fff;
+            width: 14px;
+            height: 14px;
+            border-radius: 99px;
+
+            @include abstracts.screen(md) {
+                border-width: 3px;
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        &::before {
+            left: 0;
+            translate: -90% -50%;
+        }
+
+        &::after {
+            right: 0;
+            translate: 90% -50%;
+        }
+    }
+}
