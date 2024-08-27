@@ -35,14 +35,20 @@ button,
 input,
 textarea,
 select {
+    padding: 0;
     font-family: inherit;
     color: inherit;
+    border: none;
     outline: none;  
     -webkit-tap-highlight-color: transparent;
 }
 
 .icon {
     filter: var(--icon-color);
+}
+
+input, textarea {
+    background: transparent;
 }
 
 .container {

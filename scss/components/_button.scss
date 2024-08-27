@@ -12,7 +12,6 @@
     font-weight: 700;
     line-height: 1.43; /* 142.857% */
     border-radius: 6px;
-
 }
 
 .like-btn {
@@ -24,5 +23,48 @@
     height: 50px;
     border-radius: 50%;
     box-shadow: 0px 20px 60px var(--like-btn-shadow);
+}
 
+// buttons
+.btn {
+    height: 46px;
+    font-weight: 500;
+    border-radius: 6px;
+
+    padding: 0 20px;
+    background: #f8f8fb;
+    user-select: none;
+
+    + .btn {
+        margin-left: 20px;
+    }
+
+    &--text {
+        background: transparent;
+        font-weight: 400;
+        color: #9e9da8;
+    }
+
+    &--primary {
+        background: #FFB700;
+    }
+
+    &--outline {
+        background: transparent;
+        border: 1px solid #D2D1D6; 
+    }
+
+    &--rounded {
+        border-radius: 99px;
+    }
+
+    &[disabled],
+    &--disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
 }
