@@ -1,0 +1,102 @@
+@use "../abstracts";
+
+.form {
+    &:has(:invalid) &__submit-btn {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &__group {
+        margin-top: 30px;
+
+        @include abstracts.screen(md) {
+            margin-top: 20px;
+        }
+
+        &--inline {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
+        .form__text-input {
+            border-color: red;
+            background: rgba($color: red, $alpha: 0.1); 
+        }
+
+        .form__error {
+            display: block;
+        }
+    }
+
+    &__text-input {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 50px;
+
+        border-radius: 10px;
+        border: 1.5px solid var(--form-input-border);
+        padding: 12px;
+
+        &:focus-within {
+            border-color: #77dae6;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44;
+
+        &-icon {
+            margin-left: 12px;
+
+            &-message {
+                margin-right: -5px;
+            }
+        }
+
+        &::placeholder {
+            color: #d2d1d6;
+        }
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__error {
+        text-align: left;
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin-top: 10px;
+        margin-left: 5px;
+        color: red;
+        display: none;
+    }
+
+    &__pull-right {
+        margin-left: auto;
+    }
+
+    &__checkbox {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &-label {
+            color: var(--form-auth-text); 
+            font-size: 1.5rem; 
+            font-weight: 500;
+            line-height: 1.46; /* 146.667% */
+
+            @include abstracts.screen(md) {
+                font-size: 1.4rem;
+            }
+        } 
+    }
+}

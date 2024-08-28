@@ -46,4 +46,16 @@
     
     // footer
     --footer-bg: #eeeeee;
+
+    // auth
+    --auth-content-bg: #fff;
+
+    
+    // form
+    --form-input-border: #D2D1D6;
+    --form-auth-text: #9E9DA8;
+
+    @include abstracts.screen(md) {
+        --intro-bg: #fff;
+    }
 }

@@ -27,6 +27,11 @@
 
 // buttons
 .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
     height: 46px;
     font-weight: 500;
     border-radius: 6px;
@@ -36,7 +41,9 @@
     user-select: none;
 
     + .btn {
-        margin-left: 20px;
+        &:not(.btn-no-margin) {
+            margin-left: 20px;
+        }
     }
 
     &--text {
@@ -47,6 +54,7 @@
 
     &--primary {
         background: #FFB700;
+        color: #000;
     }
 
     &--outline {
