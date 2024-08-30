@@ -1,0 +1,18 @@
+.search-bar {
+    align-items: center;
+    height: 50px;
+    border-radius: 20px;
+    background: var(--prod-info-bg);
+    padding: 15px 20px;
+
+    &__input {
+        flex: 1;
+        padding: 0 15px;
+
+        &::placeholder {
+            color:  #b9babe;
+            font-size: 1.4rem;
+            line-height: 1.43; /* 142.857% */
+        }
+    }
+}

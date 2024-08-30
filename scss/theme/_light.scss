@@ -26,36 +26,52 @@
     --sidebar-shadow: rgba(200, 200, 200, 0.4);
 
     --cate-item-bg: #eee;
-    --heading-color: #1A162E;
+    --heading-color: #1a162e;
     --cate-thumb-bg: #fff;
     @include abstracts.screen(md) {
-    --cate-item-bg: #fff;
-    } 
+        --cate-item-bg: #fff;
+    }
 
     --filter-bg: #fff;
-    --like-btn-shadow: rgba(124, 124, 124, 0.20);
+    --like-btn-shadow: rgba(124, 124, 124, 0.2);
 
     --product-card-bg: #fff;
     --product-card-shadow: rgba(237, 237, 246, 0.2);
 
     // filter form
     --filter-form-bg: #fff;
-    --filter-form-shadow: rgba(200, 200, 200, 0.40) ;
-    --filter-form-tag-bg: #F8F8FB;
+    --filter-form-shadow: rgba(200, 200, 200, 0.4);
+    --form-tag-bg: #ededf6;
 
-    
     // footer
     --footer-bg: #eeeeee;
 
     // auth
     --auth-content-bg: #fff;
 
-    
     // form
-    --form-input-border: #D2D1D6;
-    --form-auth-text: #9E9DA8;
+    --form-input-border: #d2d1d6;
+    --form-auth-text: #9e9da8;
 
     @include abstracts.screen(md) {
         --intro-bg: #fff;
+    }
+
+    // product
+    --product-detail-bg: #fff;
+
+    @include abstracts.screen(md) {
+        --product-detail-bg: #fafafd;
+    }
+    --breadcrumbs-bg: #f6f6f6;
+
+    @include abstracts.screen(md) {
+        --breadcrumbs-bg: #fff;
+    }
+    --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
+
+    --prod-info-bg: #f6f6f6;
+    @include abstracts.screen(md) {
+        --prod-info-bg: #fff;
     }
 }
