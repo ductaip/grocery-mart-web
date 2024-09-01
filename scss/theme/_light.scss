@@ -74,4 +74,20 @@
     @include abstracts.screen(md) {
         --prod-info-bg: #fff;
     }
+
+    // act dropdown
+    --act-dropdown-bg: rgba(200, 200, 200, 0.4);
+    --act-dropdown-border: #D2D1D6;
+
+    // checkout
+    --checkout-bg: #EEEEEE;
+    --cart-info-shadow: rgba(237, 237, 246, 0.20);
+    --cart-info-input-border: #D2D1D6;
+    --cart-info-color: #1A162E;
+    --gift-bg: #fff;
+    --gift-shadow: rgba(237, 237, 246, 0.20);
+    --cart-info-bg: #fff;
+    --gift-linear: linear-gradient(0deg, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255, 0.90) 100%), #7644E1;
+
+    --alpha: 0.4;
 }
