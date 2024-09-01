@@ -27,6 +27,22 @@
     background: var(--cart-info-bg);
     box-shadow: 0px 20px 60px 10px var(--cart-info-shadow);
 
+    &__sub-heading {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        color: var(--heading-color);
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44; /* 144.444% */
+    }
+
+    &__heading {
+        color: var(--heading-color);
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 1.41; /* 141.667% */
+    }
+
     &__list {
         margin-top: -30px;
     }
@@ -200,6 +216,10 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 1.46; /* 146.667% */
+
+        &-btn {
+            display: flex;
+        }
     }
 
     &__total-price {
@@ -246,5 +266,118 @@
         color: var(--text-color);
         font-size: 1.4rem;
         line-height: 1.42; /* 142.857% */
+    }
+}
+
+.user-address {
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+
+        @include abstracts.screen(md) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__title,
+    &__btn {
+        color: var(--heading-color);
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44; /* 144.444% */
+    }
+
+    &__desc,
+    .address-card__desc {
+        margin-top: 5px;
+        color: var(--text-color);
+        font-size: 1.5rem;
+        line-height: 1.46; /* 146.667% */
+    }
+
+    &__btn {
+        color: #1a162e;
+        min-width: 250px;
+        height: 40px;
+    }
+
+    &__message {
+        margin-top: 30px;
+        font-weight: 500;
+    }
+
+    &__link {
+        color: #0071dc;
+        margin-left: 5px;
+    }
+}
+
+.address-card {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    @include abstracts.screen(md) {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__left {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__title {
+        color: var(--heading-color);
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44; /* 144.444% */
+    }
+
+    &__desc {
+        width: min(520px, 90%);
+    }
+
+    &__control {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__list {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        color: var(--text-color);
+        font-size: 1.4rem;
+        line-height: 1.42; /* 142.857% */
+        gap: 30px;
+        list-style: disc;
+        margin-left: 20px;
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            align-items: initial;
+            gap: 16px;
+        }
+    }
+
+    &__checkbox {
+        &-input {
+            appearance: none;
+            &::before {
+                content: url("../icons/checkbox-uncheck.svg");
+            }
+
+            &:not(:checked)::before {
+                filter: var(--icon-color);
+            }
+
+            &:checked::before {
+                content: url("../icons/checkbox-checked.svg");
+            }
+        }
     }
 }

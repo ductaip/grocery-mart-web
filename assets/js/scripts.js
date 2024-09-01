@@ -1,15 +1,7 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-/**
- * Hàm tải template
- *
- * Cách dùng:
- * <div id="parent"></div>
- * <script>
- *  load("#parent", "./path-to-template.html");
- * </script>
- */
+ 
 function load(selector, path) {
     const cached = localStorage.getItem(path);
     if (cached) {
@@ -29,10 +21,8 @@ function load(selector, path) {
         });
 }
 
-/**
- * Hàm kiểm tra một phần tử
- * có bị ẩn bởi display: none không
- */
+
+
 function isHidden(element) {
     if (!element) return true;
 
@@ -51,10 +41,8 @@ function isHidden(element) {
     return false;
 }
 
-/**
- * Hàm buộc một hành động phải đợi
- * sau một khoảng thời gian mới được thực thi
- */
+
+
 function debounce(func, timeout = 300) {
     let timer;
     return (...args) => {
@@ -65,13 +53,8 @@ function debounce(func, timeout = 300) {
     };
 }
 
-/**
- * Hàm tính toán vị trí arrow cho dropdown
- *
- * Cách dùng:
- * 1. Thêm class "js-dropdown-list" vào thẻ ul cấp 1
- * 2. CSS "left" cho arrow qua biến "--arrow-left-pos"
- */
+
+// position of arrow
 const calArrowPos = debounce(() => {
     if (isHidden($(".js-dropdown-list"))) return;
 
@@ -83,20 +66,15 @@ const calArrowPos = debounce(() => {
     });
 });
 
-// Tính toán lại vị trí arrow khi resize trình duyệt
+
 window.addEventListener("resize", calArrowPos);
 
-// Tính toán lại vị trí arrow sau khi tải template
+
 window.addEventListener("template-loaded", calArrowPos);
 
-/**
- * Giữ active menu khi hover
- *
- * Cách dùng:
- * 1. Thêm class "js-menu-list" vào thẻ ul menu chính
- * 2. Thêm class "js-dropdown" vào class "dropdown" hiện tại
- *  nếu muốn reset lại item active khi ẩn menu
- */
+
+
+
 window.addEventListener("template-loaded", handleActiveMenu);
 
 function handleActiveMenu() {
@@ -139,13 +117,9 @@ function handleActiveMenu() {
     });
 }
 
-/**
- * JS toggle
- *
- * Cách dùng:
- * <button class="js-toggle" toggle-target="#box">Click</button>
- * <div id="box">Content show/hide</div>
- */
+
+
+
 window.addEventListener("template-loaded", initJsToggle);
 
 function initJsToggle() {
