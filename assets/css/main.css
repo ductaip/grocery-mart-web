@@ -2703,6 +2703,12 @@ b, strong {
   font-weight: 500;
   line-height: 1.45; /* 145.455% */
 }
+.form__label--medium {
+  margin-bottom: 20px;
+  color: var(--text-color);
+  font-size: 1.8rem;
+  line-height: 26px; /* 144.444% */
+}
 .form__label--small {
   font-size: 14px;
   margin-bottom: 10px;
@@ -3480,19 +3486,45 @@ b, strong {
   background: var(--cart-info-bg);
   box-shadow: 0px 20px 60px 10px var(--cart-info-shadow);
 }
-.cart-info__sub-heading {
-  margin-top: 30px;
-  margin-bottom: 30px;
+.cart-info__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.cart-info__edit-btn {
+  display: flex;
+  align-items: center;
   color: var(--heading-color);
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.44; /* 144.444% */
+  gap: 10px;
+}
+.cart-info__sub-heading {
+  color: var(--text-color);
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.44; /* 144.444% */
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 .cart-info__heading {
   color: var(--heading-color);
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.41; /* 141.667% */
+}
+.cart-info__heading--lv2 {
+  color: var(--text-color);
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.45; /* 145.455% */
+}
+.cart-info__desc {
+  margin-top: 7px;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  line-height: 1.46; /* 146.667% */
 }
 .cart-info__list {
   margin-top: -30px;
@@ -3542,6 +3574,21 @@ b, strong {
   margin: 0 auto;
   margin-top: 30px;
   max-width: 330px;
+}
+.cart-info__checkbox-input {
+  appearance: none;
+}
+.cart-info__checkbox-input::before {
+  content: url("../icons/checkbox-uncheck.svg");
+}
+.cart-info__checkbox-input:not(:checked)::before {
+  filter: var(--icon-color);
+}
+.cart-info__checkbox-input:checked::before {
+  content: url("../icons/checkbox-checked.svg");
+}
+.cart-info__form {
+  margin-bottom: 30px;
 }
 
 .cart-info + .cart-info {
@@ -3780,17 +3827,84 @@ b, strong {
     gap: 16px;
   }
 }
-.address-card__checkbox-input {
-  appearance: none;
+
+.payment-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  background: var(--body-bg);
 }
-.address-card__checkbox-input::before {
-  content: url("../icons/checkbox-uncheck.svg");
+.payment-item__title {
+  color: var(--text-color);
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.44; /* 144.444% */
 }
-.address-card__checkbox-input:not(:checked)::before {
-  filter: var(--icon-color);
+.payment-item__desc {
+  margin-top: 5px;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  line-height: 1.46; /* 146.667% */
 }
-.address-card__checkbox-input:checked::before {
-  content: url("../icons/checkbox-checked.svg");
+.payment-item__detail {
+  color: #77dae6;
+  font-size: 1.5rem;
+  line-height: 1.46; /* 146.667% */
+  text-decoration: underline;
+}
+.payment-item__left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.payment-item__thumb {
+  width: 70px;
+  height: 54px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: url(<path-to-image>) lightgray -9px -17px/125.714% 162.963% no-repeat;
+}
+.payment-item__cost-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-direction: row-reverse;
+}
+@media (max-width: 575.98px) {
+  .payment-item__cost-wrap {
+    margin-left: 90px;
+  }
+}
+.payment-item__cost {
+  color: var(--text-color);
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.44; /* 144.444% */
+}
+.cart-info__checkbox-input:not(:checked) + .payment-item__cost,
+.payment-item .cart-info__checkbox-input::before {
+  color: #9e9da8;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.44; /* 144.444% */
+  opacity: 0.7;
+}
+.payment-item__btn {
+  color: #1a162e;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.45; /* 145.455% */
+}
+@media (max-width: 575.98px) {
+  .payment-item__col {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: initial;
+    gap: 10px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

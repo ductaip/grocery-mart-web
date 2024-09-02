@@ -107,6 +107,13 @@
         font-weight: 500;
         line-height: 1.45; /* 145.455% */
 
+        &--medium {
+            margin-bottom: 20px;
+            color: var(--text-color);
+            font-size: 1.8rem;
+            line-height: 26px; /* 144.444% */
+        }
+
         &--small {
             font-size: 14px;
             margin-bottom: 10px;
