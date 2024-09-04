@@ -3509,7 +3509,7 @@ b, strong {
   margin-top: 30px;
 }
 .cart-info__heading {
-  color: var(--heading-color);
+  color: var(--text-color);
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.41; /* 141.667% */
@@ -3531,6 +3531,12 @@ b, strong {
 }
 .cart-info__bottom {
   margin-top: 30px;
+}
+@media (max-width: 575.98px) {
+  .cart-info__bottom-wrap {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .cart-info__row, .cart-info__continue-link {
   color: var(--cart-info-color);
@@ -3589,6 +3595,25 @@ b, strong {
 }
 .cart-info__form {
   margin-bottom: 30px;
+}
+.cart-info__check-all {
+  margin: 30px 0;
+}
+.cart-info__btn-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+@media (max-width: 575.98px) {
+  .cart-info__btn-wrap {
+    justify-content: initial;
+    align-items: initial;
+  }
+}
+@media (max-width: 575.98px) {
+  .cart-info__btn {
+    min-width: 150px;
+  }
 }
 
 .cart-info + .cart-info {
@@ -3667,6 +3692,11 @@ b, strong {
   gap: 20px;
   height: 44px;
 }
+@media (max-width: 575.98px) {
+  .cart-item__control {
+    gap: 10px;
+  }
+}
 .cart-item__control--small {
   gap: 30px;
   min-height: 44px;
@@ -3676,11 +3706,35 @@ b, strong {
   align-items: center;
   gap: 10px;
 }
+.cart-item__control--wrap {
+  margin-top: 16px;
+}
+@media (max-width: 991.98px) {
+  .cart-item__control--wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+}
 @media (max-width: 767.98px) {
   .cart-item__control--column {
     flex-direction: column;
     align-items: start;
     margin-bottom: 20px;
+  }
+}
+.cart-item__control--favorite {
+  margin-top: 0;
+}
+.cart-item__control--left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 575.98px) {
+  .cart-item__control--left {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 .cart-item__input {
@@ -3710,6 +3764,17 @@ b, strong {
   .cart-item__total-price {
     text-align: left;
     margin-top: 16px;
+  }
+}
+@media (max-width: 575.98px) {
+  .cart-item__total-price {
+    padding-top: 30px;
+  }
+}
+@media (max-width: 767.98px) {
+  .cart-item__checkout-btn {
+    margin-top: 20px;
+    max-width: 200px;
   }
 }
 
