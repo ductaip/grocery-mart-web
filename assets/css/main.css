@@ -1378,6 +1378,7 @@ b, strong {
   --profile-bg: #171C28;
   --profile-shadow: rgba(23, 28, 40, 0.20);
   --hover-link: #292e39;
+  --profile-account-bg: #292e39;
 }
 @media (max-width: 991.98px) {
   :root.dark {
@@ -1431,6 +1432,7 @@ b, strong {
   --profile-bg: #fff;
   --profile-shadow: rgba(237, 237, 246, 0.2);
   --hover-link: #ccc;
+  --profile-account-bg: #F6F6F6;
 }
 @media (max-width: 991.98px) {
   :root {
@@ -3989,7 +3991,7 @@ b, strong {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 0 20px;
+  padding: 40px 10px 20px;
   background: linear-gradient(180deg, rgba(26, 22, 46, 0) 0%, #1a162e 100%), url("../../assets/img/auth/profile-bg.png") no-repeat center/cover;
   border-radius: 20px 20px 0px 0px;
 }
@@ -4013,7 +4015,7 @@ b, strong {
   line-height: 1.46; /* 146.667% */
 }
 .profile-menu__wrap {
-  padding: 0 50px 30px;
+  padding: 0 30px 30px;
 }
 .profile-menu__title {
   margin-top: 30px;
@@ -4043,6 +4045,124 @@ b, strong {
 }
 .profile-menu__link:hover {
   background: var(--hover-link);
+}
+
+.new-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 169px;
+  border: 1px dashed #ccc;
+  border-radius: 10px;
+  gap: 15px;
+  cursor: pointer;
+}
+@media (max-width: 1399.98px) {
+  .new-card {
+    height: 140px;
+  }
+}
+@media (max-width: 991.98px) {
+  .new-card {
+    width: 330px;
+    height: 201px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767.98px) {
+  .new-card {
+    max-width: 100%;
+    width: 450px;
+    height: 300px;
+  }
+}
+.new-card__text {
+  color: #d2d1d6;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.42; /* 142.857% */
+}
+
+@media (max-width: 991.98px) {
+  .payment-card {
+    margin: 0 auto;
+  }
+}
+.payment-card__img {
+  max-width: 100%;
+  object-fit: contain;
+}
+@media (max-width: 991.98px) {
+  .payment-card__img--display {
+    width: 330px;
+    height: 200px;
+  }
+}
+@media (max-width: 767.98px) {
+  .payment-card__img--display {
+    width: 450px;
+    height: 300px;
+  }
+}
+.payment-card__desc {
+  margin-bottom: 15px;
+}
+@media (max-width: 767.98px) {
+  .payment-card__wrap {
+    padding: 20px;
+  }
+}
+
+.account-info {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background: var(--profile-account-bg);
+  padding: 10px;
+  gap: 10px;
+}
+.account-info__title {
+  color: var(--heading-color);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.46; /* 146.667% */
+}
+.account-info__desc {
+  margin-top: 3px;
+  color: var(--text-color);
+  font-size: 1.4rem;
+  line-height: 1.42; /* 142.857% */
+}
+.account-info__icon {
+  padding: 15px;
+  border-radius: 8px;
+  background: var(--cart-info-bg);
+}
+
+.favourite-item {
+  display: flex;
+  align-items: center;
+}
+.favourite-item__thumb {
+  width: 151px;
+  height: 108px;
+  object-fit: contain;
+}
+.favourite-item__content {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.favourite-item__btn {
+  height: 42px;
+}
+
+.separate {
+  margin: var(--margin) 0;
+  height: 1px;
+  background: #292e39;
 }
 
 /*# sourceMappingURL=main.css.map */

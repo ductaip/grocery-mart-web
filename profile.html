@@ -69,8 +69,8 @@
 
                 <!-- profile content -->
                 <div class="profile-container"> 
-                    <div class="row">
-                        <div class="col-4">
+                    <div class="row gy-3">
+                        <div class="col-3 col-xl-4 col-lg-5 col-md-12">
                             <aside class="profile__sidebar">
                                 <!-- User -->
                                 <div class="profile-user">
@@ -134,7 +134,7 @@
                                             <li>
                                                 <a href="#!" class="profile-menu__link profile-menu__link--last">
                                                     <span class="profile-menu__icon">
-                                                        <img src="./assets/img/auth/protect.svg" alt="" class="icon">
+                                                        <img src="./assets/icons/protect.svg" alt="" class="icon">
                                                     </span>
                                                     Registries
                                                 </a>
@@ -182,7 +182,134 @@
                                 </div>
                             </aside>
                         </div>
-                        <div class="col-8"></div>
+                        <div class="col-9 col-xl-8 col-lg-7 col-md-12">
+                            <div class="cart-info">
+                                <div class="row gy-3">
+                                    <div class="col-12">
+                                        <h2 class="cart-info__heading">My Wallet</h2>
+                                        <p class="cart-info__desc payment-card__desc">Payment Methods</p>
+        
+                                        <div class="row row-cols-3 row-cols-xl-2 row-cols-lg-1 payment-card__wrap">
+                                            <div class="col">
+                                                <article class="payment-card">
+                                                    <img src="./assets/img/checkout/payment-card1.png" alt="" class="payment-card__img payment-card__img--display">
+                                                </article>
+                                            </div>
+
+                                            <div class="col">
+                                                <article class="payment-card payment-card__second">
+                                                    <img src="./assets/img/checkout/payment-card2.png" alt="" class="payment-card__img payment-card__img--display">
+                                                </article>
+                                            </div>
+
+                                            <div class="col"> 
+                                                <article class="new-card">
+                                                    <img src="./assets/icons/plus.svg" alt="" class="payment-card__img icon">
+                                                    <p class="new-card__text">Add New Card</p>
+                                                </article>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- account info -->
+                                    <div class="col-12"> 
+                                        <h2 class="cart-info__heading">Account info</h2>    
+                                        <p class="cart-info__desc payment-card__desc">Addresses, contact information and password</p>
+        
+                                        <div class="row gy-md-2 row-cols-2 row-cols-lg-1">
+                                            <!-- account info 1 --> 
+                                            <div class="col">
+                                                <a href="./edit-personal-info.html">
+                                                    <article class="account-info">
+                                                        <div class="account-info__icon">
+                                                            <img src="./assets/img/auth/Message.svg" alt="" class="icon" />
+                                                        </div>
+                                                        <div>
+                                                            <h3 class="account-info__title">Email Address</h3>
+                                                            <p class="account-info__desc">tarek97.ta@gmail.com</p>
+                                                        </div>
+                                                    </article>
+                                                </a>
+                                            </div> 
+
+                                            <!-- account info 2 --> 
+                                            <div class="col">
+                                                <a href="./edit-personal-info.html">
+                                                    <article class="account-info">
+                                                        <div class="account-info__icon">
+                                                            <img src="./assets/icons/map.svg" alt="" class="icon" />
+                                                        </div>
+                                                        <div>
+                                                            <h3 class="account-info__title">Phone number</h3>
+                                                            <p class="account-info__desc">+000 11122 2345 657</p>
+                                                        </div>
+                                                    </article>
+                                                </a>
+                                            </div> 
+
+                                            <!-- account info 3 -->
+                                            <div class="col">
+                                                <a href="./edit-personal-info.html">
+                                                    <article class="account-info">
+                                                        <div class="account-info__icon">
+                                                            <img src="./assets/icons/calling.svg" alt="" class="icon" />
+                                                        </div>
+                                                        <div>
+                                                            <h3 class="account-info__title">Add an address</h3>
+                                                            <p class="account-info__desc">Bangladesh Embassy, Washington, DC 20008</p>
+                                                        </div>
+                                                    </article>
+                                                </a>
+                                            </div> 
+                                        </div>
+                                    </div>
+
+                                    <!-- bottom -->
+                                    <div class="col-12">
+                                        <h2 class="cart-info__heading">Lists</h2>
+                                        <p class="cart-info__desc profile__desc">2 items - Primary</p>
+
+                                        <!-- Favourite item 1 -->
+                                        <article class="favourite-item">
+                                            <img
+                                                src="./assets/img/products/item4.png"
+                                                alt=""
+                                                class="favourite-item__thumb"
+                                            />
+                                            <div>
+                                                <h3 class="favourite-item__title">
+                                                    Coffee Beans - Espresso Arabica and Robusta Beans
+                                                </h3>
+                                                <div class="favourite-item__content">
+                                                    <span class="favourite-item__price">$47.00</span>
+                                                    <button class="btn btn--primary btn--rounded favourite-item__btn">Add to cart</button>
+                                                </div>
+                                            </div>
+                                        </article>
+
+                                        <div class="separate" style="--margin: 20px"></div>
+
+                                        <!-- Favourite item 2 -->
+                                        <article class="favourite-item">
+                                            <img
+                                                src="./assets/img/products/item2.png" 
+                                                alt=""
+                                                class="favourite-item__thumb"
+                                            />
+                                            <div>
+                                                <h3 class="favourite-item__title">
+                                                    Lavazza Coffee Blends - Try the Italian Espresso
+                                                </h3>
+                                                <div class="favourite-item__content">
+                                                    <span class="favourite-item__price">$53.00</span>
+                                                    <button class="btn btn--primary btn--rounded favourite-item__btn">Add to cart</button>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
