@@ -2,8 +2,7 @@
 
 :root.dark {
     --text-color: #b9babe;
-    --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%)
-        saturate(7500%) hue-rotate(151deg) brightness(103%) contrast(100%);
+    --icon-color: brightness(0) saturate(100%) invert(76%) sepia(1%) saturate(582%) hue-rotate(191deg) brightness(99%) contrast(90%);
 
     --body-bg: #292e39;
     --header-bg-color: #171c28;
@@ -82,6 +81,10 @@
     --gift-linear: #292E39;
     --alpha: 0.7;
 
-    // shipping 
+    // profile
+    --profile-bg: #171C28;
+    --profile-shadow: rgba(23, 28, 40, 0.20);
+    --hover-link : #292e39;
+
 
 }
